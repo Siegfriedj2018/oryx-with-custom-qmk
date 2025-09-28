@@ -235,15 +235,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           rgblight_sethsv(152,255,255);
       }
       return false;
-  }
-  return true;
-}
-
-
-// Add the behaviour of this new keycode
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case KC_CYCLE_LAYERS:
+  case KC_CYCLE_LAYERS:
       // Our logic will happen on presses, nothing is done on releases
       if (!record->event.pressed) {
         // We've already handled the keycode (doing nothing), let QMK know so no further code is run unnecessarily
@@ -263,12 +255,40 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       layer_move(next_layer);
       return false;
-
-    // Process other keycodes normally
-    default:
-      return true;
   }
+  return true;
 }
+
+
+// Add the behaviour of this new keycode
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//   switch (keycode) {
+//     case KC_CYCLE_LAYERS:
+//       // Our logic will happen on presses, nothing is done on releases
+//       if (!record->event.pressed) {
+//         // We've already handled the keycode (doing nothing), let QMK know so no further code is run unnecessarily
+//         return false;
+//       }
+
+//       uint8_t current_layer = get_highest_layer(layer_state);
+
+//       // Check if we are within the range, if not quit
+//       if (current_layer > LAYER_CYCLE_END || current_layer < LAYER_CYCLE_START) {
+//         return false;
+//       }
+
+//       uint8_t next_layer = current_layer + 1;
+//       if (next_layer > LAYER_CYCLE_END) {
+//           next_layer = LAYER_CYCLE_START;
+//       }
+//       layer_move(next_layer);
+//       return false;
+
+//     // Process other keycodes normally
+//     default:
+//       return true;
+//   }
+// }
 /*
 void leader_end_user(void) {
   if (leader_sequence_one_key(KC_0)){
