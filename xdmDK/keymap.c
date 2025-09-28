@@ -6,11 +6,11 @@
 #endif
 
 enum custom_keycodes {
-  RGB_SLD = ZSA_SAFE_RANGE,
+  KC_CYCLE_LAYERS = ZSA_SAFE_RANGE,
+  RGB_SLD,
   HSV_0_245_245,
   HSV_74_255_206,
   HSV_152_255_255,
-  KC_CYCLE_LAYERS = QK_USER,
 };
 
 // 1st layer on the cycle
