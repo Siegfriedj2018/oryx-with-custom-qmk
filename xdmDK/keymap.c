@@ -17,13 +17,20 @@ enum custom_keycodes {
 #define DUAL_FUNC_0 LT(9, KC_6)
 #define DUAL_FUNC_1 LT(12, KC_N)
 
+// row 1 is mapped to row 1 on keyboard
+// row 2 is mapped to row 2 on keyboard
+//row 3 is mapped to row 3 on keyboard
+// row 4 is mapped to row 4 on keyboard
+// row 5 has row 5 and the big thumb buttons
+// bottom row has only the three thumb buttons from thumb clusters
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     KC_DELETE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_ESCAPE,                                      KC_QUOTE,       KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,       
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TT(1),                                          TT(1),          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
-    KC_GRAVE,       KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           QK_LEAD,                                                                          TT(2),          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_ENTER,       
-    KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RIGHT_SHIFT, 
-    KC_LEFT_CTRL,   KC_CAPS,        RGB_MODE_FORWARD,KC_LEFT,        KC_RIGHT,       KC_LEFT_GUI,                                                                                                    DUAL_FUNC_0,    KC_UP,          KC_DOWN,        KC_LBRC,        KC_RBRC,        KC_LEFT_CTRL,   
+    KC_GRAVE,       KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           QK_LEAD,                                        TT(2),          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_ENTER,       
+    KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RIGHT_SHIFT, 
+    KC_LEFT_CTRL,   KC_CAPS,        RGB_MODE_FORWARD,KC_LEFT,       KC_RIGHT,       KC_LEFT_GUI,                                                                    DUAL_FUNC_0,    KC_UP,          KC_DOWN,        KC_LBRC,        KC_RBRC,        KC_LEFT_CTRL,   
     KC_SPACE,       KC_BSPC,        KC_LEFT_ALT,                    KC_ENTER,       KC_TAB,         KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
@@ -61,10 +68,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [5] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_TRANSPARENT, KC_P,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_NO,          KC_Q,           KC_W,           KC_E,           KC_R,           KC_TRANSPARENT, KC_J,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_NO,          KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_M,                                                                           QK_LEAD, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT_GUI,                                                                                                    KC_BSPC,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_SPACE,       KC_LEFT_SHIFT,  KC_TAB,                         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    KC_NO,          KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_M,                                                  QK_LEAD, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT_GUI,                                                                           KC_BSPC, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_SPACE,       KC_LEFT_SHIFT,  KC_TAB,                                                                                                         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
