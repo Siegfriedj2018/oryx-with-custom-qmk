@@ -5,15 +5,12 @@
 #define ZSA_SAFE_RANGE SAFE_RANGE
 #endif
 
-enum keycodes {
-  KC_CYCLE_LAYERS = QK_USER,
-};
-
 enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
   HSV_0_245_245,
   HSV_74_255_206,
   HSV_152_255_255,
+  KC_CYCLE_LAYERS = QK_USER,
 };
 
 // 1st layer on the cycle
