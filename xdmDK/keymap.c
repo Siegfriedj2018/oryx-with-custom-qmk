@@ -234,34 +234,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void leader_end_user(void) {
   if (leader_sequence_one_key(KC_0)){
-    if (IS_LAYER_ON(0)) {
-      layer_off(0);
-    }
-    layer_on(0);
+    layer_move(0);
   }else if (leader_sequence_one_key(KC_1)) {
-    if (IS_LAYER_ON(1)) {
-      layer_off(1);
-    }
-    layer_on(1);
+    layer_move(1);
   } else if (leader_sequence_one_key(KC_2)) {
-    if (IS_LAYER_ON(2)) {
-      layer_off(2);
-    }
-    layer_on(2);
+    layer_move(2);
   }else if (leader_sequence_one_key(KC_3)) {
-    if (IS_LAYER_ON(3)) {
-      layer_off(3);
-    }
-    layer_on(3);
+    layer_move(3);
   }else if (leader_sequence_one_key(KC_4)) {
-    if (IS_LAYER_ON(4)) {
-      layer_off(4);
-    }
-    layer_on(4);
+    layer_move(4);
   }else if (leader_sequence_one_key(KC_5)) {
-    if (IS_LAYER_ON(5)) {
-      layer_off(5);
-    }
-    layer_on(5);
+    layer_move(5);
   }
 }
