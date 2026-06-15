@@ -21,7 +21,7 @@ enum custom_keycodes {
 #define DUAL_FUNC_0 LT(12, KC_F1)
 #define DUAL_FUNC_1 LT(13, KC_9)
 
-// row 1 is mapped to row 1 on keyboard
+// row 1  eis mapped to row 1 on keyboard
 // row 2 is mapped to row 2 on keyboard
 //row 3 is mapped to row 3 on keyboard
 // row 4 is mapped to row 4 on keyboard
@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_LBRC,                                         KC_RBRC,          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
     KC_GRAVE,       KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           LSFT(KC_LBRC),                             LSFT(KC_RBRC),          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_ENTER,       
     KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                                              KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RIGHT_SHIFT, 
-    KC_LEFT_CTRL,   KC_CAPS,        KC_CYCLE_LAYERS,KC_LEFT,       KC_RIGHT,       KC_LEFT_GUI,                                                                 DUAL_FUNC_0,           KC_UP,          KC_DOWN,        KC_EQUAL,       KC_NO,          KC_LEFT_CTRL,   
-    KC_SPACE,       KC_BSPC,        KC_LEFT_ALT,                    KC_ENTER,       KC_TAB,         KC_SPACE
+    KC_LEFT_CTRL,   KC_CAPS,        KC_CYCLE_LAYERS,KC_LEFT,       KC_RIGHT,       KC_LEFT_GUI,                                                                 KC_LEFT_GUI,           KC_UP,          KC_DOWN,        KC_EQUAL,       KC_NO,          KC_LEFT_CTRL,   
+    KC_SPACE,       KC_BSPC,        KC_NO,                    KC_ENTER,       KC_LEFT_ALT,         KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LEFT_ALT,    KC_Q,           KC_W,           KC_E,           KC_R,           KC_TRANSPARENT, KC_J,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_NO,          KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_M,                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_LEFT_SHIFT,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                                           KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_NO,          KC_NO,          KC_CYCLE_LAYERS,KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT_GUI,                                                                           KC_BSPC, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_NO,          KC_NO,          KC_CYCLE_LAYERS,KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,                                                                           KC_LEFT_GUI, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_SPACE,       KC_LEFT_SHIFT,  KC_TAB,                                                                                                         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
